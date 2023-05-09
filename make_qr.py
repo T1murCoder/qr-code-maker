@@ -21,6 +21,5 @@ if __name__ == '__main__':
     text = input()
     img_bytes = generate_code(text)
     
-    print(img_bytes)
     with open('test.png', 'wb') as f:
         f.write(img_bytes.read())
