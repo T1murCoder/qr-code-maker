@@ -2,14 +2,14 @@ import qrcode
 from io import BytesIO
 
 
-def generate_code(text) -> BytesIO:
+def generate_code(text, bg_color="#FFFFFF") -> BytesIO:
     qr = qrcode.QRCode(
         version=5,
         border=4
     )
     qr.add_data(text)
     qr.make(fit=True)
-    img = qr.make_image()
+    img = qr.make_image(back_color=bg_color)
     img_bytes = BytesIO()
     img.seek(0)
     img.save(img_bytes, format='png')
