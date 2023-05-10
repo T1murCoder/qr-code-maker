@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+<div class="card mx-auto col-md-8">
+  <div class="card-header">
+    <h4>QR Code Generator</h4>
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-5 border-end">
+        <form>
+            <div class="mb-3">
+              <label for="data" class="form-label">Data:</label>
+              <input type="text" class="form-control" id="data" name="data" required>
+            </div>
+            <div class="mb-3">
+              <label for="size" class="form-label">Size:</label>
+              <input type="number" class="form-control" id="size" name="size" min="100" max="1000" value="450" required>
+            </div>
+            <div class="mb-3">
+              <label for="bgcolor" class="form-label">Background Color:</label>
+              <input type="color" class="form-control form-control-color" id="bgcolor" name="bgcolor" value="#FFFFFF">
+            </div>
+            <div class="mb-3">
+              <label for="fgcolor" class="form-label">Foreground Color:</label>
+              <input type="color" class="form-control form-control-color" id="fgcolor" name="fgcolor" value="#000000">
+            </div>
+            <div class="mb-3">
+              <button type="submit" class="btn btn-primary">Generate QR Code</button>
+            </div>
+        </form>
+      </div>
+      <div class="col-md-7">
+        <div id="qrcode" class="mx-auto d-flex justify-content-center align-items-center bg-light" style="height: 450px; width: 450px;">
+          <p class="text-muted">QR code will appear here</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+{% endblock %}
