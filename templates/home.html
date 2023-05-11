@@ -26,7 +26,11 @@
             <div class="mb-3">
                 <label for="size" class="form-label">{{ form.size.label }}</label>
                 {{ form.size(class="form-control form-range", id="size") }}
-              </div>
+            </div>
+            <div class="mb-3">
+              <label for="select_style" class="form-label">{{ form.style.label }}</label>
+              {{ form.style(class="form-control form-select", id="select_style") }}
+            </div>
             <div class="mb-3">
               {{ form.submit(type="submit", class="btn btn-primary") }}
             </div>

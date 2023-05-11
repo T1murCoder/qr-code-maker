@@ -16,9 +16,11 @@ def home():
         bg_color = form.background_color.data
         fg_color = form.foreground_color.data
         size = form.size.data
+        style = form.style.data
         
+        print(style)
         
-        code = generate_code(text, size=size, bg_color=bg_color, fg_color=fg_color)
+        code = generate_code(text, size=size, bg_color=bg_color, fg_color=fg_color, style=style)
 
         return render_template("home.html", title="QR maker", form=form, img_bytes=code)
     
