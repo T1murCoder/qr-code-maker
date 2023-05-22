@@ -17,7 +17,8 @@ def home():
         fg_color = form.foreground_color.data
         size = form.size.data
         style = form.style.data
-        
+        print(bg_color)
+        print(fg_color)
         print(style)
         
         code = generate_code(text, size=size, bg_color=bg_color, fg_color=fg_color, style=style)

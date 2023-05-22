@@ -15,8 +15,9 @@ def generate_code(text, size=450, bg_color="#FFFFFF", fg_color="#000000", style=
     qr.make(fit=True)
     
     module_drawer = get_module_drawer(style)
-    
-    img = qr.make_image(back_color=bg_color, fill_color=fg_color, image_factory=StyledPilImage, module_drawer=module_drawer())
+    # TODO: Пофиксить баг, когда используется image_factory, то не работают цвета
+    # , image_factory=StyledPilImage, module_drawer=module_drawer()
+    img = qr.make_image(back_color=bg_color, fill_color=fg_color)
     
     img_bytes = BytesIO()
     img.seek(0)
