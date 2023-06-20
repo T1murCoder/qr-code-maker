@@ -20,7 +20,6 @@ def generate_code(text, size=450, bg_color="#FFFFFF", fg_color="#000000", style=
     img = qr.make_image(back_color=bg_color, fill_color=fg_color)
     
     img_bytes = BytesIO()
-    img.seek(0)
     img.save(img_bytes, format='png')
     img_bytes.seek(0)
     
